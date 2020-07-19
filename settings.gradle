@@ -1,0 +1,2 @@
+rootProject.name='ECommApp'
+include ':app'

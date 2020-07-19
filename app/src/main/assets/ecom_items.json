@@ -1,0 +1,816 @@
+{
+	"ecom_items": [
+		{
+			"category": "Handwash",
+			"Itemname": "Dettol",
+			"quantity": "200ml",
+			"price": "50",
+			"imagename": "dettol.jpg"
+		},
+		{
+			"category": "Handwash",
+			"Itemname": "Godrej",
+			"quantity": "750ml",
+			"price": "77",
+			"imagename": "godrej.jpg"
+		},
+		{
+			"category": "Handwash",
+			"Itemname": "Himalaya",
+			"quantity": "500ml",
+			"price": "230",
+			"imagename": "himalaya.jpg"
+		},
+		{
+			"category": "Handwash",
+			"Itemname": "Santoor",
+			"quantity": "750ml",
+			"price": "93",
+			"imagename": "santoor.jpg"
+		},
+		{
+			"category": "Handwash",
+			"Itemname": "Savlon",
+			"quantity": "750ml",
+			"price": "150",
+			"imagename": "savlon.jpg"
+		},
+		{
+			"category": "Handwash",
+			"Itemname": "Lifebouy",
+			"quantity": "750ml",
+			"price": "200",
+			"imagename": "lifebouy.jpg"
+		},
+		{
+			"category": "Handwash",
+			"Itemname": "Lifebouy10",
+			"quantity": "750ml",
+			"price": "111",
+			"imagename": "lifebouy10.jpg"
+		},
+		{
+			"category": "Handwash",
+			"Itemname": "Himalay_tulsi",
+			"quantity": "250ml",
+			"price": "100",
+			"imagename": "himalay_tulsi.jpg"
+		},
+		{
+			"category": "Handwash",
+			"Itemname": "Bacter _shield_sanitizer",
+			"quantity": "50ml",
+			"price": "23",
+			"imagename": "bacter_shield_sanitizer.jpg"
+		},
+		{
+			"category": "Handwash",
+			"Itemname": "Bacter_shield _sanitizer",
+			"quantity": "50ml",
+			"price": "23",
+			"imagename": "bacter_shield_sanitizer.jpg"
+		},
+		{
+			"category": "Handwash",
+			"Itemname": "Fresh_ones _sanitizer",
+			"quantity": "100ml",
+			"price": "50",
+			"imagename": "fresh_ones_sanitizer.jpg"
+		},
+		{
+			"category": "Handwash",
+			"Itemname": "Hand_aid",
+			"quantity": "750ml",
+			"price": "50",
+			"imagename": "hand_aid.jpg"
+		},
+		{
+			"category": "Handwash",
+			"Itemname": "Hand_aid2",
+			"quantity": "750ml",
+			"price": "50",
+			"imagename": "hand_aid2.jpg"
+		},
+		{
+			"category": "Handwash",
+			"Itemname": "Himalaya_tulsi & aloe_refill",
+			"quantity": "750ml",
+			"price": "150",
+			"imagename": "himalaya_tulsi_and_aloe_refill.jpg"
+		},
+		{
+			"category": "Handwash",
+			"Itemname": "Himalaya_tulsi & aloe",
+			"quantity": "250ml",
+			"price": "100",
+			"imagename": "himalaya_tulsi_and_aloe.jpg"
+		},
+		{
+			"category": "Handwash",
+			"Itemname": "Himalaya_tulsi & lemon",
+			"quantity": "750ml",
+			"price": "155",
+			"imagename": "himalaya_tulsi_and_lemon.jpg"
+		},
+		{
+			"category": "Handwash",
+			"Itemname": "Himalaya_tulsi",
+			"quantity": "250ml",
+			"price": "75",
+			"imagename": "himalaya_tulsi.jpg"
+		},
+		{
+			"category": "Handwash",
+			"Itemname": "Life_bouy_germ",
+			"quantity": "750ml",
+			"price": "90",
+			"imagename": "life_bouy_germ.jpg"
+		},
+		{
+			"category": "Handwash",
+			"Itemname": "Savlon_herbal",
+			"quantity": "750ml",
+			"price": "73",
+			"imagename": "savlon_herbal.jpg"
+		},
+		{
+			"category": "Oil and ghee",
+			"Itemname": "Aadhar_sunflower_oil",
+			"quantity": "1L",
+			"price": "200",
+			"imagename": "aadhar_sunflower_oil.jpg"
+		},
+		{
+			"category": "Oil and ghee",
+			"Itemname": "Amul_ghee",
+			"quantity": "1l",
+			"price": "490",
+			"imagename": "amul_ghee.jpg"
+		},
+		{
+			"category": "Oil and ghee",
+			"Itemname": "Amul_ghee1l",
+			"quantity": "1L",
+			"price": "700",
+			"imagename": "amul_ghee1l.jpg"
+		},
+		{
+			"category": "Oil and ghee",
+			"Itemname": "Dhara ",
+			"quantity": "5L",
+			"price": "800",
+			"imagename": "dhara5l.jpg"
+		},
+		{
+			"category": "Oil and ghee",
+			"Itemname": "Dharagroundnutoil",
+			"quantity": "1L",
+			"price": "250",
+			"imagename": "dharagroundnutoil.jpg"
+		},
+		{
+			"category": "Oil and ghee",
+			"Itemname": "Fortuner ",
+			"quantity": "15L",
+			"price": "1500",
+			"imagename": "fortuner15l.jpg"
+		},
+		{
+			"category": "Oil and ghee",
+			"Itemname": "Fortune_oil",
+			"quantity": "1L",
+			"price": "119",
+			"imagename": "fortune_oil.jpg"
+		},
+		{
+			"category": "Oil and ghee",
+			"Itemname": "Fortuner mustard oil",
+			"quantity": "1L",
+			"price": "470",
+			"imagename": "fortuner_mustard_oil.jpg"
+		},
+		{
+			"category": "Oil and ghee",
+			"Itemname": "Fortuner sunlite ",
+			"quantity": "15L",
+			"price": "1580",
+			"imagename": "fortunersunlite15l.jpg"
+		},
+		{
+			"category": "Oil and ghee",
+			"Itemname": "Gemini",
+			"quantity": "1L",
+			"price": "200",
+			"imagename": "gemini.jpg"
+		},
+		{
+			"category": "Oil and ghee",
+			"Itemname": "Gowardhan",
+			"quantity": "1L",
+			"price": "505",
+			"imagename": "gowardhan.jpg"
+		},
+		{
+			"category": "Oil and ghee",
+			"Itemname": "Gowardhann",
+			"quantity": "1L",
+			"price": "534",
+			"imagename": "gowardhann.jpg"
+		},
+		{
+			"category": "Oil and ghee",
+			"Itemname": "Groundnutoilgulab",
+			"quantity": "1L",
+			"price": "119",
+			"imagename": "groundnut_oil_gulab.jpg"
+		},
+		{
+			"category": "Oil and ghee",
+			"Itemname": "Motherdairypurecowghee",
+			"quantity": "1L",
+			"price": "461",
+			"imagename": "motherdairypurecowghee.jpg"
+		},
+		{
+			"category": "Oil and ghee",
+			"Itemname": "Safolaa",
+			"quantity": "5L",
+			"price": "590",
+			"imagename": "safola5l.jpg"
+		},
+		{
+			"category": "Oil and ghee",
+			"Itemname": "Safola",
+			"quantity": "5l",
+			"price": "795",
+			"imagename": "safola.jpg"
+		},
+		{
+			"category": "Oil and ghee",
+			"Itemname": "Sagar",
+			"quantity": "1L",
+			"price": "490",
+			"imagename": "sagar.jpg"
+		},
+		{
+			"category": "Oil and ghee",
+			"Itemname": "Sunday",
+			"quantity": "1L",
+			"price": "250",
+			"imagename": "sunday.jpg"
+		},
+		{
+			"category": "Oil and ghee",
+			"Itemname": "Sunday15",
+			"quantity": "15L",
+			"price": "1600",
+			"imagename": "sunday15l.jpg"
+		},
+		{
+			"category": "Oil and ghee",
+			"Itemname": "Swaad",
+			"quantity": "1L",
+			"price": "199",
+			"imagename": "swaad.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Bajaj_almond_drop",
+			"quantity": "500ml",
+			"price": "257",
+			"imagename": "bajaj_almond_drop.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Chandrika _ayurvedic_soap",
+			"quantity": "3*125",
+			"price": "135",
+			"imagename": "chandrika_ayurvedic_soap.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Clinic_plus_strong & health",
+			"quantity": "650ml",
+			"price": "265",
+			"imagename": "clinic_plus_strong_health.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Coconourish_oil",
+			"quantity": "500ml",
+			"price": "99",
+			"imagename": "coconourish_oil.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Coconourish_oil1",
+			"quantity": "500ml",
+			"price": "99",
+			"imagename": "coconourish_oil1.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Dabar_almond_hair_oil",
+			"quantity": "500ml",
+			"price": "219",
+			"imagename": "dabar_almond_hair_oil.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Dabar_amla_oil",
+			"quantity": "450ml",
+			"price": "183",
+			"imagename": "dabar_amla_oil.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Dettol",
+			"quantity": "4*125",
+			"price": "190",
+			"imagename": "dettol.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Dove_oxygen_moisture_shampoo",
+			"quantity": "650ml",
+			"price": "489",
+			"imagename": "dove_oxygen_moisture_shampoo.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Dove",
+			"quantity": "4*100",
+			"price": "207",
+			"imagename": "dove.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Fair & lovely",
+			"quantity": "110gm",
+			"price": "184",
+			"imagename": "fair_n_lovely.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Grace_beauty_soap",
+			"quantity": "3*150",
+			"price": "56",
+			"imagename": "grace_beauty_soap.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Hamam_soap_bar",
+			"quantity": "150gms",
+			"price": "47",
+			"imagename": "hamam_soap_bar.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Induleka_bringha _ayurvrdic_hair_oil",
+			"quantity": "100ml",
+			"price": "351",
+			"imagename": "induleka_bringha_hair.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Indulekha_shampoo",
+			"quantity": "200ml",
+			"price": "219",
+			"imagename": "indulekha_shampoo.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Jasmine",
+			"quantity": "300ml",
+			"price": "115",
+			"imagename": "jasmine.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Johnsons_baby_shampoo",
+			"quantity": "250ml",
+			"price": "150",
+			"imagename": "johnsons_baby_shampoo.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Khadi_lemon",
+			"quantity": "125gms",
+			"price": "43",
+			"imagename": "khadi_lemon.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Khadi_natural_neem_tulsi_soap",
+			"quantity": "125gms",
+			"price": "43",
+			"imagename": "khadi_natural_neem_soap.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Liril_lemon & tea_tree_oil_soap",
+			"quantity": "3*125",
+			"price": "136",
+			"imagename": "liril_lemon_tea_tree_oil.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Lux_jasmine & almond_oil",
+			"quantity": "3*150",
+			"price": "107",
+			"imagename": "lux_jasmine_almond_oil.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Lux_rose & almond",
+			"quantity": "3*150",
+			"price": "105",
+			"imagename": "lux_rose_almond.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Mahabhringraj_ayurvedic_hair_oil",
+			"quantity": "200ml",
+			"price": "190",
+			"imagename": "mahabhringraj_hair_oil.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Margo_neem_soap",
+			"quantity": "4*100",
+			"price": "111",
+			"imagename": "margo_neem_soap.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Medimix_ayurvedic_sandal",
+			"quantity": "4*125",
+			"price": "197",
+			"imagename": "medimix_ayurvedic_sandal.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Medimix_ayurvedic_soap",
+			"quantity": "4*125",
+			"price": "147",
+			"imagename": "medimix_ayurvedic_soap.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Mild & clear",
+			"quantity": "5*100",
+			"price": "115",
+			"imagename": "mild_n_clear.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Mysore_sandal_soap",
+			"quantity": "3*150",
+			"price": "201",
+			"imagename": "mysore_sandal_soap.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Nivea_aloe_body_lotion",
+			"quantity": "400ml",
+			"price": "250",
+			"imagename": "navea_aloe_body_lotion.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Navratna_ayrvedic_oil",
+			"quantity": "500ml",
+			"price": "236",
+			"imagename": "navratna_ayrvedic_oil.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Nyle_naturals_shampoo",
+			"quantity": "800ml",
+			"price": "225",
+			"imagename": "nyle_naturals_shampoo.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Parachute 1l",
+			"quantity": "1L",
+			"price": "199",
+			"imagename": "parachute1l.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Parachute_advance_aloevera",
+			"quantity": "250ml",
+			"price": "102",
+			"imagename": "parachute_advance_aloevera.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Patanjali_aloe_vera_kanti_soap",
+			"quantity": "75gms",
+			"price": "15",
+			"imagename": "patanjali_aloe_vera_soap.jpg"
+		},
+		{
+			"category": "Personal use",
+			"Itemname": "Patanjali haldi and chandan kanti soap",
+			"quantity": "75gms",
+			"price": "15",
+			"imagename": "patanjali_haldi_chandan_kanti_soap.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Bajari",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "bajari.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Basmati_rice_mogra",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "basmati_rice_mogra.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Besan",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "besan.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Basmati_rice_broken",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "basmati_rice_broken.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Brown_rice",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "brown_rice.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Charminar",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "charminar.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Daawat_rozana_mini_mogra_basmati",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "daawat_rozana_mini_mogra_basmati.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Daawat_super",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "daawat_super.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Daawat",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "daawat.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Dawaat_basmati",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "dawaat basmati.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Feast_rozzana",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "feast_rozzana.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Fortune_atta",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "fortune_atta.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Fortune",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "fortune.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "India_gate_tibar",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "india_gate_tibar.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Indiagate",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "indiagate.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Maida",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "maida.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Maka_flour",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "maka_flour.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Modak",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "modak.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Mp_wheat",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "mp_wheat.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Premia_poha",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "premia_poha.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Red_poha",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "red_poha.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Red_rice",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "red_rice.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Upwas_bhajan",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "upwas.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Wade_peeth",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "wade_peeth.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Wheat atta",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "wheat_atta.jpg"
+		},
+		{
+			"category": "Rice and aata",
+			"Itemname": "Wheat sihore",
+			"quantity": "1 Kg",
+			"price": "50",
+			"imagename": "wheat_sihore.jpg"
+		},
+		{
+			"category": "Home and kitchen",
+			"Itemname": "Anjali baby fork",
+			"quantity": "6 pcs",
+			"price": "89",
+			"imagename": "anjali_baby_fork.jpg"
+		},
+		{
+			"category": "Home and kitchen",
+			"Itemname": "Anjali baby spoon",
+			"quantity": "6 pcs",
+			"price": "99",
+			"imagename": "anjali_baby_spoon.jpg"
+		},
+		{
+			"category": "Home and kitchen",
+			"Itemname": "Anjali coconut scraper",
+			"quantity": "10 Kg",
+			"price": "500",
+			"imagename": "anjali_coconut_scraper.jpg"
+		},
+		{
+			"category": "Home and kitchen",
+			"Itemname": "Crystal sleek chopping board small",
+			"quantity": "1 U",
+			"price": "149",
+			"imagename": "crystal_sleek_chopping_board_small.jpg"
+		},
+		{
+			"category": "Home and kitchen",
+			"Itemname": "Crystal cut peel & slice",
+			"quantity": "3 U",
+			"price": "125",
+			"imagename": "crystal_cut_peel & slice.jpg"
+		},
+		{
+			"category": "Home and kitchen",
+			"Itemname": "Crystal stainless steel oil pourer",
+			"quantity": "500 ml",
+			"price": "249",
+			"imagename": "crystal_stainless_steel_oil_pourer.jpg"
+		},
+		{
+			"category": "Home and kitchen",
+			"Itemname": "Wonder chef smart peeler",
+			"quantity": "1pcs",
+			"price": "189",
+			"imagename": "wonder_chef_smart_peeler.jpg"
+		},
+		{
+			"category": "Home and kitchen",
+			"Itemname": "Wonderchief waterstone silicone solid spatule",
+			"quantity": "1 pcs",
+			"price": "269",
+			"imagename": "wonderchief_waterstone_silicone_solid_spatule.jpg"
+		},
+		{
+			"category": "Home and kitchen",
+			"Itemname": "Wonderchief waterstone silicone spatula",
+			"quantity": "1pcs",
+			"price": "349",
+			"imagename": "wonderchief_waterstone_silicone_spatula.jpg"
+		},
+		{
+			"category": "More",
+			"Itemname": "Britani nutri choice",
+			"quantity": "1kg",
+			"price": "148",
+			"imagename": "britania_nutri_choice.jpg"
+		},
+		{
+			"category": "More",
+			"Itemname": "Britania vita marie gold biscuit",
+			"quantity": "300 grms",
+			"price": "37",
+			"imagename": "britania_vita_marie_gold_biscuit.jpg"
+		},
+		{
+			"category": "More",
+			"Itemname": "Dark fantasy",
+			"quantity": "300 grms",
+			"price": "108",
+			"imagename": "dark_fantasy.jpg"
+		},
+		{
+			"category": "More",
+			"Itemname": "Good day",
+			"quantity": "600 grms",
+			"price": "85",
+			"imagename": "good_day.jpg"
+		},
+		{
+			"category": "More",
+			"Itemname": "Jim jam",
+			"quantity": "150 grms",
+			"price": "31",
+			"imagename": "good_day.jpg"
+		},
+		{
+			"category": "More",
+			"Itemname": "lotte_choco_pie",
+			"quantity": "504 grms",
+			"price": "144",
+			"imagename": "lotte_choco_pie.jpg"
+		},
+		{
+			"category": "More",
+			"Itemname": "Parle_g",
+			"quantity": "800 grms",
+			"price": "65",
+			"imagename": "parle_G.jpg"
+		}
+	]
+}
