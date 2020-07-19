@@ -646,7 +646,7 @@
 		},
 		{
 			"category": "Rice and aata",
-			"Itemname": "Mp_wheat",
+			"Itemname": "Mp wheat",
 			"quantity": "1 Kg",
 			"price": "50",
 			"imagename": "mp_wheat.jpg"
@@ -800,7 +800,7 @@
 		},
 		{
 			"category": "More",
-			"Itemname": "lotte_choco_pie",
+			"Itemname": "Lotte choco pie",
 			"quantity": "504 grms",
 			"price": "144",
 			"imagename": "lotte_choco_pie.jpg"

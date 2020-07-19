@@ -14,9 +14,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.allandroidprojects.ecomsample.utility.ImageUrlUtils;
 import com.ashwini.ecommapp.R;
 import com.ashwini.ecommapp.product.ItemDetailsActivity;
+import com.ashwini.ecommapp.utility.ImageUrlUtils;
+import com.bumptech.glide.Glide;
 import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.util.ArrayList;
@@ -72,8 +73,10 @@ public class WishlistActivity extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(final WishlistActivity.SimpleStringRecyclerViewAdapter.ViewHolder holder, final int position) {
-            final Uri uri = Uri.parse(mWishlistImageUri.get(position));
-            holder.mImageView.setImageURI(uri);
+            Glide.with(mContext).load("file:///android_asset/products/"+mWishlistImageUri.get(position)).into(holder.mImageView);
+
+            //final Uri uri = Uri.parse(mWishlistImageUri.get(position));
+            //holder.mImageView.setImageURI(uri);
             holder.mLayoutItem.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

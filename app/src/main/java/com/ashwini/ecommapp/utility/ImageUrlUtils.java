@@ -6,8 +6,11 @@ import java.util.ArrayList;
  * Created by 06peng on 2015/6/24.
  */
 public class ImageUrlUtils {
+
     static ArrayList<String> wishlistImageUri = new ArrayList<>();
     static ArrayList<String> cartListImageUri = new ArrayList<>();
+    static ArrayList<String> itemName = new ArrayList<>();
+    static ArrayList<String> itemPrice = new ArrayList<>();
 
     public static String[] getImageUrls() {
         String[] urls = new String[]{
@@ -253,5 +256,32 @@ public class ImageUrlUtils {
 
     public ArrayList<String> getCartListImageUri() {
         return this.cartListImageUri;
+    }
+
+
+    // Methods for Adding Item
+    public void addItemName(String wishlistImageUri) {
+        this.itemName.add(0, wishlistImageUri);
+    }
+
+    public void removeItemName(int position) {
+        this.itemName.remove(position);
+    }
+
+    public ArrayList<String> getItemNameList() {
+        return this.itemName;
+    }
+
+    // Methods for Adding Item price
+    public void addItemPrice(String wishlistImageUri) {
+        this.itemPrice.add(0, wishlistImageUri);
+    }
+
+    public void removeItemPrice(int position) {
+        this.itemPrice.remove(position);
+    }
+
+    public ArrayList<String> getItemPriceList() {
+        return this.itemPrice;
     }
 }

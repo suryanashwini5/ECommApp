@@ -11,10 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.allandroidprojects.ecomsample.utility.ImageUrlUtils;
 import com.ashwini.ecommapp.R;
 import com.ashwini.ecommapp.photoview.view.PhotoView;
-
+import com.ashwini.ecommapp.utility.ImageUrlUtils;
 
 
 public class ViewPagerActivity extends Activity {

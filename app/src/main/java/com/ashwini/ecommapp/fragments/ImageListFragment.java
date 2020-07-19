@@ -35,11 +35,11 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
-import com.allandroidprojects.ecomsample.utility.ImageUrlUtils;
 import com.ashwini.ecommapp.R;
 import com.ashwini.ecommapp.model.Product;
 import com.ashwini.ecommapp.product.ItemDetailsActivity;
 import com.ashwini.ecommapp.startup.MainActivity;
+import com.ashwini.ecommapp.utility.ImageUrlUtils;
 import com.ashwini.ecommapp.utility.UtilityAssets;
 import com.bumptech.glide.Glide;
 import com.facebook.drawee.view.SimpleDraweeView;

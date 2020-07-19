@@ -10,13 +10,13 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.allandroidprojects.ecomsample.utility.ImageUrlUtils;
 import com.ashwini.ecommapp.R;
 import com.ashwini.ecommapp.fragments.ImageListFragment;
 import com.ashwini.ecommapp.fragments.ViewPagerActivity;
 import com.ashwini.ecommapp.notification.NotificationCountSetClass;
 import com.ashwini.ecommapp.options.CartListActivity;
 import com.ashwini.ecommapp.startup.MainActivity;
+import com.ashwini.ecommapp.utility.ImageUrlUtils;
 import com.bumptech.glide.Glide;
 import com.facebook.drawee.view.SimpleDraweeView;
 
@@ -71,6 +71,8 @@ public class ItemDetailsActivity extends AppCompatActivity {
             public void onClick(View view) {
                 ImageUrlUtils imageUrlUtils = new ImageUrlUtils();
                 imageUrlUtils.addCartListImageUri(stringImageUri);
+                imageUrlUtils.addItemName(StringItemName);
+                imageUrlUtils.addItemPrice(StringItemPrice);
                 Toast.makeText(ItemDetailsActivity.this, "Item added to cart.", Toast.LENGTH_SHORT).show();
                 MainActivity.notificationCountCart++;
                 NotificationCountSetClass.setNotifyCount(MainActivity.notificationCountCart);
@@ -82,6 +84,8 @@ public class ItemDetailsActivity extends AppCompatActivity {
             public void onClick(View view) {
                 ImageUrlUtils imageUrlUtils = new ImageUrlUtils();
                 imageUrlUtils.addCartListImageUri(stringImageUri);
+                imageUrlUtils.addItemName(StringItemName);
+                imageUrlUtils.addItemPrice(StringItemPrice);
                 MainActivity.notificationCountCart++;
                 NotificationCountSetClass.setNotifyCount(MainActivity.notificationCountCart);
                 startActivity(new Intent(ItemDetailsActivity.this, CartListActivity.class));

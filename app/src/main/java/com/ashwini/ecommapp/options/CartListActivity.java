@@ -9,21 +9,26 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.allandroidprojects.ecomsample.utility.ImageUrlUtils;
 import com.ashwini.ecommapp.R;
 import com.ashwini.ecommapp.product.ItemDetailsActivity;
 import com.ashwini.ecommapp.startup.MainActivity;
+import com.ashwini.ecommapp.utility.ImageUrlUtils;
+import com.bumptech.glide.Glide;
 import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.util.ArrayList;
 
 import static com.ashwini.ecommapp.fragments.ImageListFragment.STRING_IMAGE_POSITION;
 import static com.ashwini.ecommapp.fragments.ImageListFragment.STRING_IMAGE_URI;
+import static com.ashwini.ecommapp.fragments.ImageListFragment.STRING_ITEM_DESC;
+import static com.ashwini.ecommapp.fragments.ImageListFragment.STRING_ITEM_NAME;
+import static com.ashwini.ecommapp.fragments.ImageListFragment.STRING_ITEM_PRICE;
 
 public class CartListActivity extends AppCompatActivity {
     private static Context mContext;
@@ -36,6 +41,8 @@ public class CartListActivity extends AppCompatActivity {
 
         ImageUrlUtils imageUrlUtils = new ImageUrlUtils();
         ArrayList<String> cartlistImageUri = imageUrlUtils.getCartListImageUri();
+        ArrayList<String> itemName = imageUrlUtils.getItemNameList();
+        ArrayList<String> itemPrice = imageUrlUtils.getItemPriceList();
         //Show cart layout based on items
         setCartLayout();
 
@@ -43,7 +50,7 @@ public class CartListActivity extends AppCompatActivity {
         RecyclerView.LayoutManager recylerViewLayoutManager = new LinearLayoutManager(mContext);
 
         recyclerView.setLayoutManager(recylerViewLayoutManager);
-        recyclerView.setAdapter(new CartListActivity.SimpleStringRecyclerViewAdapter(recyclerView, cartlistImageUri));
+        recyclerView.setAdapter(new CartListActivity.SimpleStringRecyclerViewAdapter(recyclerView, cartlistImageUri, itemName, itemPrice));
     }
 
     protected void setCartLayout() {
@@ -74,11 +81,20 @@ public class CartListActivity extends AppCompatActivity {
             extends RecyclerView.Adapter<CartListActivity.SimpleStringRecyclerViewAdapter.ViewHolder> {
 
         private ArrayList<String> mCartlistImageUri;
+        private ArrayList<String> mItemNames;
+        private ArrayList<String> mItemPrices;
+
+
         private RecyclerView mRecyclerView;
 
-        public SimpleStringRecyclerViewAdapter(RecyclerView recyclerView, ArrayList<String> wishlistImageUri) {
+        public SimpleStringRecyclerViewAdapter(RecyclerView recyclerView, ArrayList<String> wishlistImageUri,
+                                               ArrayList<String> itemNames,  ArrayList<String> itemPrice) {
             mCartlistImageUri = wishlistImageUri;
             mRecyclerView = recyclerView;
+            mItemNames = itemNames;
+            mItemPrices = itemPrice;
+
+
         }
 
         @Override
@@ -100,12 +116,20 @@ public class CartListActivity extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(final CartListActivity.SimpleStringRecyclerViewAdapter.ViewHolder holder, final int position) {
-            final Uri uri = Uri.parse(mCartlistImageUri.get(position));
-            holder.mImageView.setImageURI(uri);
+
+            holder.mItemName.setText(mItemNames.get(position));
+            holder.mItemPrice.setText(mItemPrices.get(position));
+            Glide.with(mContext).load("file:///android_asset/products/" + mCartlistImageUri.get(position)).into(holder.mImageView);
+
+            // final Uri uri = Uri.parse(mCartlistImageUri.get(position));
+            //holder.mImageView.setImageURI(uri);
             holder.mLayoutItem.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(mContext, ItemDetailsActivity.class);
+                    intent.putExtra(STRING_ITEM_NAME, mItemNames.get(position));
+                    intent.putExtra(STRING_ITEM_PRICE, mItemPrices.get(position));
+                    intent.putExtra(STRING_ITEM_DESC, "1");
                     intent.putExtra(STRING_IMAGE_URI, mCartlistImageUri.get(position));
                     intent.putExtra(STRING_IMAGE_POSITION, position);
                     mContext.startActivity(intent);
@@ -142,6 +166,9 @@ public class CartListActivity extends AppCompatActivity {
             public final View mView;
             public final SimpleDraweeView mImageView;
             public final LinearLayout mLayoutItem, mLayoutRemove, mLayoutEdit;
+            public final TextView mItemName;
+            public final TextView mItemDesc;
+            public final TextView mItemPrice;
 
             public ViewHolder(View view) {
                 super(view);
@@ -150,6 +177,9 @@ public class CartListActivity extends AppCompatActivity {
                 mLayoutItem = (LinearLayout) view.findViewById(R.id.layout_item_desc);
                 mLayoutRemove = (LinearLayout) view.findViewById(R.id.layout_action1);
                 mLayoutEdit = (LinearLayout) view.findViewById(R.id.layout_action2);
+                mItemName = view.findViewById(R.id.item_name);
+                mItemDesc = view.findViewById(R.id.item_desc);
+                mItemPrice = view.findViewById(R.id.item_price);
             }
         }
     }
