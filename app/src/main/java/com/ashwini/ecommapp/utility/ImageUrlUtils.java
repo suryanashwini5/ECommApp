@@ -1,4 +1,4 @@
-package com.allandroidprojects.ecomsample.utility;
+package com.ashwini.ecommapp.utility;
 
 import java.util.ArrayList;
 

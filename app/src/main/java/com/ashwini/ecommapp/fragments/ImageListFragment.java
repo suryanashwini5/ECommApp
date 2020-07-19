@@ -53,6 +53,9 @@ public class ImageListFragment extends Fragment {
 
     public static final String STRING_IMAGE_URI = "ImageUri";
     public static final String STRING_IMAGE_POSITION = "ImagePosition";
+    public static final String STRING_ITEM_NAME = "ItemName";
+    public static final String STRING_ITEM_PRICE = "ItemPrice";
+    public static final String STRING_ITEM_DESC = "ItemDesc";
     private static MainActivity mActivity;
     private ArrayList<Product> products;
 
@@ -180,6 +183,9 @@ public class ImageListFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(mActivity, ItemDetailsActivity.class);
+                    intent.putExtra(STRING_ITEM_NAME, product.getItemName());
+                    intent.putExtra(STRING_ITEM_PRICE, product.getPrice());
+                    intent.putExtra(STRING_ITEM_DESC, product.getQuantity());
                     intent.putExtra(STRING_IMAGE_URI, product.getImageName());
                     intent.putExtra(STRING_IMAGE_POSITION, position);
                     mActivity.startActivity(intent);
