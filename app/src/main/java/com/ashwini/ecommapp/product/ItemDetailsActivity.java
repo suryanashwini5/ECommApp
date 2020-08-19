@@ -13,12 +13,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.ashwini.ecommapp.R;
 import com.ashwini.ecommapp.fragments.ImageListFragment;
 import com.ashwini.ecommapp.fragments.ViewPagerActivity;
+import com.ashwini.ecommapp.model.Product;
+import com.ashwini.ecommapp.model.Products;
 import com.ashwini.ecommapp.notification.NotificationCountSetClass;
 import com.ashwini.ecommapp.options.CartListActivity;
 import com.ashwini.ecommapp.startup.MainActivity;
 import com.ashwini.ecommapp.utility.ImageUrlUtils;
 import com.bumptech.glide.Glide;
 import com.facebook.drawee.view.SimpleDraweeView;
+
+import java.util.ArrayList;
 
 public class ItemDetailsActivity extends AppCompatActivity {
     private static final String TAG = "ItemDetailsActivity";
@@ -40,11 +44,12 @@ public class ItemDetailsActivity extends AppCompatActivity {
         //Getting image uri from previous screen
         if (getIntent() != null) {
 
+
             StringItemName = getIntent().getStringExtra(ImageListFragment.STRING_ITEM_NAME);
             StringItemPrice = getIntent().getStringExtra(ImageListFragment.STRING_ITEM_PRICE);
             StringItemDesc = getIntent().getStringExtra(ImageListFragment.STRING_ITEM_DESC);
             stringImageUri = getIntent().getStringExtra(ImageListFragment.STRING_IMAGE_URI);
-            imagePosition = getIntent().getIntExtra(ImageListFragment.STRING_IMAGE_URI, 0);
+            imagePosition = getIntent().getIntExtra(ImageListFragment.STRING_IMAGE_POSITION, 0);
 
         }
         //Log.i(TAG, "onCreate:StringItemName "+StringItemName);
@@ -70,9 +75,11 @@ public class ItemDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ImageUrlUtils imageUrlUtils = new ImageUrlUtils();
-                imageUrlUtils.addCartListImageUri(stringImageUri);
-                imageUrlUtils.addItemName(StringItemName);
-                imageUrlUtils.addItemPrice(StringItemPrice);
+                Product cartP = new Product();
+                cartP.setItemName(StringItemName);
+                cartP.setPrice(StringItemPrice);
+                cartP.setImageName(stringImageUri);
+                imageUrlUtils.addCartProduct(cartP);
                 Toast.makeText(ItemDetailsActivity.this, "Item added to cart.", Toast.LENGTH_SHORT).show();
                 MainActivity.notificationCountCart++;
                 NotificationCountSetClass.setNotifyCount(MainActivity.notificationCountCart);
@@ -83,9 +90,11 @@ public class ItemDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ImageUrlUtils imageUrlUtils = new ImageUrlUtils();
-                imageUrlUtils.addCartListImageUri(stringImageUri);
-                imageUrlUtils.addItemName(StringItemName);
-                imageUrlUtils.addItemPrice(StringItemPrice);
+                Product buyP = new Product();
+                buyP.setItemName(StringItemName);
+                buyP.setPrice(StringItemPrice);
+                buyP.setImageName(stringImageUri);
+                imageUrlUtils.addBuyProduct(buyP);
                 MainActivity.notificationCountCart++;
                 NotificationCountSetClass.setNotifyCount(MainActivity.notificationCountCart);
                 startActivity(new Intent(ItemDetailsActivity.this, CartListActivity.class));

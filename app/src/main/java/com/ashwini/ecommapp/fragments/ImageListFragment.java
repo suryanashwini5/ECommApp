@@ -17,10 +17,6 @@
 package com.ashwini.ecommapp.fragments;
 
 import android.content.Intent;
-import android.content.res.AssetManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -44,8 +40,6 @@ import com.ashwini.ecommapp.utility.UtilityAssets;
 import com.bumptech.glide.Glide;
 import com.facebook.drawee.view.SimpleDraweeView;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 
 
@@ -99,16 +93,18 @@ public class ImageListFragment extends Fragment {
             items = ImageUrlUtils.getImageUrls();
         }*/
         if (ImageListFragment.this.getArguments().getInt("type") == 1) {
-            products = UtilityAssets.loadCategoryProducts(getContext(),getString(R.string.item_1));
+            products = UtilityAssets.loadCategoryProducts(getContext(), getString(R.string.item_1));
         } else if (ImageListFragment.this.getArguments().getInt("type") == 2) {
-            products = UtilityAssets.loadCategoryProducts(getContext(),getString(R.string.item_2));
+            products = UtilityAssets.loadCategoryProducts(getContext(), getString(R.string.item_2));
         } else if (ImageListFragment.this.getArguments().getInt("type") == 3) {
-            products = UtilityAssets.loadCategoryProducts(getContext(),getString(R.string.item_3));
+            products = UtilityAssets.loadCategoryProducts(getContext(), getString(R.string.item_3));
         } else if (ImageListFragment.this.getArguments().getInt("type") == 4) {
-            products = UtilityAssets.loadCategoryProducts(getContext(),getString(R.string.item_4));
+            products = UtilityAssets.loadCategoryProducts(getContext(), getString(R.string.item_4));
         } else if (ImageListFragment.this.getArguments().getInt("type") == 5) {
-            products = UtilityAssets.loadCategoryProducts(getContext(),getString(R.string.item_5));
-        } else {
+            products = UtilityAssets.loadCategoryProducts(getContext(), getString(R.string.item_5));
+        } else if (ImageListFragment.this.getArguments().getInt("type") == 6) {
+            products = UtilityAssets.loadCategoryProducts(getContext(), getString(R.string.item_6));
+        }else {
             products = UtilityAssets.loadProductsFromAsset(getContext());
         }
 
@@ -123,7 +119,7 @@ public class ImageListFragment extends Fragment {
         private ArrayList<Product> mProducts;
         private RecyclerView mRecyclerView;
 
-        public SimpleStringRecyclerViewAdapter(RecyclerView recyclerView,  ArrayList<Product> products) {
+        public SimpleStringRecyclerViewAdapter(RecyclerView recyclerView, ArrayList<Product> products) {
             mProducts = products;
             mRecyclerView = recyclerView;
         }
@@ -158,10 +154,10 @@ public class ImageListFragment extends Fragment {
 
             final Product product = mProducts.get(position);
             //final Uri uri = Uri.parse(product.getImageName());
-            Log.i("TAG", "onBindViewHolder: "+product.getImageName());
+            Log.i("TAG", "onBindViewHolder: " + product.getImageName());
             //final Uri uri = Uri.parse("file:///android_asset/"+product.getImageName());
-            Log.i("TAG", ": file:///android_asset/"+product.getImageName());
-            Glide.with(mActivity).load("file:///android_asset/products/"+product.getImageName()).into(holder.mImageView);
+            Log.i("TAG", ": file:///android_asset/" + product.getImageName());
+            Glide.with(mActivity).load("file:///android_asset/products/" + product.getImageName()).into(holder.mImageView);
 //            Glide.with(mActivity)
 //                    .load(Uri.parse("file:///android_asset/"+product.getImageName()))
 //                    .into(holder.mImageView);
@@ -176,7 +172,7 @@ public class ImageListFragment extends Fragment {
             Bitmap bitmap = BitmapFactory.decodeStream(is);
             holder.mImageView.setImageBitmap(bitmap);*/
             holder.mItemName.setText(product.getItemName());
-            holder.mItemPrice.setText(mActivity.getResources().getString(R.string.Rs)  +product.getPrice());
+            holder.mItemPrice.setText(mActivity.getResources().getString(R.string.Rs) + product.getPrice());
             holder.mItemDesc.setText(product.getQuantity());
 
             holder.mLayoutItem.setOnClickListener(new View.OnClickListener() {
@@ -198,7 +194,15 @@ public class ImageListFragment extends Fragment {
                 @Override
                 public void onClick(View view) {
                     ImageUrlUtils imageUrlUtils = new ImageUrlUtils();
-                    imageUrlUtils.addWishlistImageUri(product.getImageName());
+                    Product wishP = new Product();
+                    wishP.setItemName(product.getItemName());
+                    wishP.setPrice(product.getPrice());
+                    wishP.setImageName(product.getImageName());
+                    imageUrlUtils.addWishProduct(wishP);
+
+
+                    //ImageUrlUtils imageUrlUtils = new ImageUrlUtils();
+                    //imageUrlUtils.addWishlistImageUri(product.getImageName());
                     holder.mImageViewWishlist.setImageResource(R.drawable.ic_favorite_black_18dp);
                     notifyDataSetChanged();
                     Toast.makeText(mActivity, "Item added to wish list.", Toast.LENGTH_SHORT).show();

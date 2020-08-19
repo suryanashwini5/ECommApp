@@ -1,6 +1,7 @@
 package com.ashwini.ecommapp.utility;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.ashwini.ecommapp.model.Product;
 
@@ -13,7 +14,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 
 public class UtilityAssets {
-
+    private static final String TAG = "UtilityAssets";
     public static ArrayList<Product> loadProductsFromAsset(Context context) {
         ArrayList<Product> productList = new ArrayList<>();
         String json = null;
@@ -70,6 +71,7 @@ public class UtilityAssets {
             productList.clear();
             for (int i = 0; i < event_jArry.length(); i++) {
                 JSONObject jsonObject = event_jArry.getJSONObject(i);
+                //Log.i(TAG, "loadCategoryProducts: "+jsonObject.getString("category"));
                 if(category.equals(jsonObject.getString("category"))){
                     Product event = new Product();
                     event.setCategory(jsonObject.getString("category"));

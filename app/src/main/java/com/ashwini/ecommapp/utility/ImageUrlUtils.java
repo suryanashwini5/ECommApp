@@ -1,5 +1,7 @@
 package com.ashwini.ecommapp.utility;
 
+import com.ashwini.ecommapp.model.Product;
+
 import java.util.ArrayList;
 
 /**
@@ -7,10 +9,14 @@ import java.util.ArrayList;
  */
 public class ImageUrlUtils {
 
-    static ArrayList<String> wishlistImageUri = new ArrayList<>();
-    static ArrayList<String> cartListImageUri = new ArrayList<>();
-    static ArrayList<String> itemName = new ArrayList<>();
-    static ArrayList<String> itemPrice = new ArrayList<>();
+    //static ArrayList<String> wishlistImageUri = new ArrayList<>();
+    //static ArrayList<String> cartListImageUri = new ArrayList<>();
+   // static ArrayList<String> itemName = new ArrayList<>();
+   // static ArrayList<String> itemPrice = new ArrayList<>();
+
+    private ArrayList<Product> cartProducts= new ArrayList<>();
+    private ArrayList<Product> buyProducts = new ArrayList<>();
+    private ArrayList<Product> wishProducts = new ArrayList<>();
 
     public static String[] getImageUrls() {
         String[] urls = new String[]{
@@ -233,55 +239,68 @@ public class ImageUrlUtils {
     }
 
     // Methods for Wishlist
-    public void addWishlistImageUri(String wishlistImageUri) {
-        this.wishlistImageUri.add(0, wishlistImageUri);
-    }
-
-    public void removeWishlistImageUri(int position) {
-        this.wishlistImageUri.remove(position);
-    }
-
-    public ArrayList<String> getWishlistImageUri() {
-        return this.wishlistImageUri;
-    }
+//    public void addWishlistImageUri(String wishlistImageUri) {
+//        this.wishlistImageUri.add(0, wishlistImageUri);
+//    }
+//
+//    public void removeWishlistImageUri(int position) {
+//        this.wishlistImageUri.remove(position);
+//    }
+//
+//    public ArrayList<String> getWishlistImageUri() {
+//        return this.wishlistImageUri;
+//    }
 
     // Methods for Cart
-    public void addCartListImageUri(String wishlistImageUri) {
-        this.cartListImageUri.add(0, wishlistImageUri);
-    }
-
-    public void removeCartListImageUri(int position) {
-        this.cartListImageUri.remove(position);
-    }
-
-    public ArrayList<String> getCartListImageUri() {
-        return this.cartListImageUri;
-    }
+//    public void addCartListImageUri(String wishlistImageUri) {
+//        this.cartListImageUri.add(0, wishlistImageUri);
+//    }
+//
+//    public void removeCartListImageUri(int position) {
+//        this.cartListImageUri.remove(position);
+//    }
+//
+//    public ArrayList<String> getCartListImageUri() {
+//        return this.cartListImageUri;
+//    }
 
 
     // Methods for Adding Item
-    public void addItemName(String wishlistImageUri) {
-        this.itemName.add(0, wishlistImageUri);
+    public void addCartProduct(Product wishlistImageUri) {
+        this.cartProducts.add(0, wishlistImageUri);
     }
 
-    public void removeItemName(int position) {
-        this.itemName.remove(position);
+    public void removeCartProduct(int position) {
+        this.cartProducts.remove(position);
     }
 
-    public ArrayList<String> getItemNameList() {
-        return this.itemName;
+    public ArrayList<Product> getCartProductList() {
+        return this.cartProducts;
     }
 
     // Methods for Adding Item price
-    public void addItemPrice(String wishlistImageUri) {
-        this.itemPrice.add(0, wishlistImageUri);
+    public void addBuyProduct(Product wishlistImageUri) {
+        this.buyProducts.add(0, wishlistImageUri);
     }
 
-    public void removeItemPrice(int position) {
-        this.itemPrice.remove(position);
+    public void removeBuyProduct(int position) {
+        this.buyProducts.remove(position);
     }
 
-    public ArrayList<String> getItemPriceList() {
-        return this.itemPrice;
+    public ArrayList<Product> getBuyProductList() {
+        return this.buyProducts;
+    }
+
+    // Methods for Adding Item price
+    public void addWishProduct(Product wishlistImageUri) {
+        this.wishProducts.add(0, wishlistImageUri);
+    }
+
+    public void removeWishProduct(int position) {
+        this.wishProducts.remove(position);
+    }
+
+    public ArrayList<Product> getWishProductList() {
+        return this.wishProducts;
     }
 }

@@ -48,17 +48,16 @@ public class MainActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView =  findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        viewPager = (ViewPager) findViewById(R.id.viewpager);
-        tabLayout = (TabLayout) findViewById(R.id.tabs);
+        viewPager =  findViewById(R.id.viewpager);
+        tabLayout =  findViewById(R.id.tabs);
 
         if (viewPager != null) {
             setupViewPager(viewPager);
             tabLayout.setupWithViewPager(viewPager);
         }
-
 
       /*  FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
