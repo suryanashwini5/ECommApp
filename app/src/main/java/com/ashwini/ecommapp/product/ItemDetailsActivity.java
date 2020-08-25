@@ -3,6 +3,7 @@ package com.ashwini.ecommapp.product;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -22,7 +23,9 @@ import com.ashwini.ecommapp.utility.ImageUrlUtils;
 import com.bumptech.glide.Glide;
 import com.facebook.drawee.view.SimpleDraweeView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ItemDetailsActivity extends AppCompatActivity {
     private static final String TAG = "ItemDetailsActivity";
@@ -97,7 +100,11 @@ public class ItemDetailsActivity extends AppCompatActivity {
                 imageUrlUtils.addBuyProduct(buyP);
                 MainActivity.notificationCountCart++;
                 NotificationCountSetClass.setNotifyCount(MainActivity.notificationCountCart);
-                startActivity(new Intent(ItemDetailsActivity.this, CartListActivity.class));
+                ArrayList<Product> mQuestionList = imageUrlUtils.getBuyProductList();
+                Intent intent = new Intent(ItemDetailsActivity.this, CartListActivity.class);
+                intent.putExtra("QuestionListExtra", mQuestionList);
+                startActivity(intent);
+                //startActivity(new Intent(ItemDetailsActivity.this, CartListActivity.class));
 
             }
         });

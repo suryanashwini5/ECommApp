@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +33,7 @@ import static com.ashwini.ecommapp.fragments.ImageListFragment.STRING_ITEM_PRICE
 
 public class WishlistActivity extends AppCompatActivity {
     private static Context mContext;
+    private static final String TAG = "WishlistActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,7 @@ public class WishlistActivity extends AppCompatActivity {
         //ArrayList<String> wishlistImageUri = imageUrlUtils.getWishlistImageUri();
 
         ArrayList<Product> wishList = imageUrlUtils.getWishProductList();
+        Log.i(TAG, "wishList: size "+wishList.size());
         RecyclerView recyclerView =  findViewById(R.id.recyclerview);
         RecyclerView.LayoutManager recylerViewLayoutManager = new LinearLayoutManager(mContext);
 

@@ -2,7 +2,6 @@ package com.ashwini.ecommapp.options;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -33,19 +32,30 @@ import static com.ashwini.ecommapp.fragments.ImageListFragment.STRING_ITEM_NAME;
 import static com.ashwini.ecommapp.fragments.ImageListFragment.STRING_ITEM_PRICE;
 
 public class CartListActivity extends AppCompatActivity {
-    private static Context mContext;
     private static final String TAG = "CartListActivity";
+    private static Context mContext;
+    private TextView text_action_bottom1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart_list);
+        text_action_bottom1 = findViewById(R.id.text_action_bottom1);
         mContext = CartListActivity.this;
-
         ImageUrlUtils imageUrlUtils = new ImageUrlUtils();
+        ArrayList<Product> cartList = new ArrayList<Product>();
+        cartList = (ArrayList<Product>) getIntent().getSerializableExtra("QuestionListExtra");
+        if(cartList != null){
+            Log.e(TAG, "onCreate:cartList.size " + cartList.size());
+            if (cartList.size() != 0) {
+                Product product = cartList.get(0);
+                text_action_bottom1.setText(product.getPrice());
+            }
+        }
+
         //ArrayList<String> cartlistImageUri = imageUrlUtils.getCartListImageUri();
-        ArrayList<Product> cartList = imageUrlUtils.getCartProductList();
-        Log.e(TAG, "onCreate:cartList.size "+cartList.size() );
+        //ArrayList<Product> cartList = imageUrlUtils.getCartProductList();
+
 
         setCartLayout();
 
@@ -85,7 +95,7 @@ public class CartListActivity extends AppCompatActivity {
 
         //private ArrayList<String> mCartlistImageUri;
         private ArrayList<Product> mCartList;
-       // private ArrayList<String> mItemPrices;
+        // private ArrayList<String> mItemPrices;
 
 
         private RecyclerView mRecyclerView;
@@ -117,14 +127,14 @@ public class CartListActivity extends AppCompatActivity {
         public void onBindViewHolder(final CartListActivity.SimpleStringRecyclerViewAdapter.ViewHolder holder, final int position) {
 
 
-       final  Product product = mCartList.get(position);
-       //     Log.e(TAG, "CartList: "+product.getItemName() );
+            final Product product = mCartList.get(position);
+            //     Log.e(TAG, "CartList: "+product.getItemName() );
             //Log.e(TAG, ": file:///android_asset/"+product.getImageName());
-           Glide.with(mContext).load("file:///android_asset/products/" + product.getImageName()).into(holder.mImageView);
+            Glide.with(mContext).load("file:///android_asset/products/" + product.getImageName()).into(holder.mImageView);
 
-           holder.mItemName.setText("product.getItemName()");
-            holder.mItemPrice.setText(mContext.getResources().getString(R.string.Rs)  +product.getPrice());
-           holder.mItemDesc.setText(product.getQuantity());
+            holder.mItemName.setText(product.getItemName());
+            holder.mItemPrice.setText(mContext.getResources().getString(R.string.Rs) + product.getPrice());
+            holder.mItemDesc.setText(product.getQuantity());
             // final Uri uri = Uri.parse(mCartlistImageUri.get(position));
             //holder.mImageView.setImageURI(uri);
             holder.mLayoutItem.setOnClickListener(new View.OnClickListener() {
